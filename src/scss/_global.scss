@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+// titles styles
+h1{
+    font-size: $h1;
+}
+
+h2{
+    font-size: $h2;
+}
+
+h3{
+    font-size: $h3;
+}
+
+h4{
+    font-size: $h4;
+}
+
+h1, h2, h3, h4{
+    font-weight: 300;
+    letter-spacing: normal;
+    font-family: $titlesFont;
+}
+
+// text styles
+body{
+    font-size: $mobileFontSize;
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    color: $textColor;
+    font-family: $mainFont;
+    @media (min-width: 1099px) {
+        font-size: $laptopFontSize;
+    }
+    @media (min-width: 1500px) {
+        font-size: $desktopFontSize;
+    }
+}
+
+// container
+.container{
+    max-width: $containerWidth + (2 * $containerPadding);
+    padding: 0 $containerPadding;
+    margin: 0 auto;
+}

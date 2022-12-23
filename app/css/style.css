@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 66px;
+}
+
+h3 {
+  font-size: 42px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+  letter-spacing: normal;
+  font-family: "Test Signifier", sans-serif;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  color: #060D37;
+  font-family: "Lato", sans-serif;
+}
+@media (min-width: 1099px) {
+  body {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1500px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+.container {
+  max-width: 1530px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 15px 0;
+}
+.header.light {
+  background: #82ADE3;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu-list {
+  display: flex;
+  gap: 62px;
+}
+.header__menu-item_multiple {
+  position: relative;
+}
+.header__menu-item_multiple::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 50%;
+}
+.header__menu-item_multiple:hover .header__menu-subs {
+  visibility: visible;
+  opacity: 1;
+}
+.header__menu-item_multiple .header__menu-link:hover::after {
+  width: 0;
+}
+.header__menu-subs {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  padding: 43px 34px 16px;
+  margin-left: -34px;
+  transition: opacity 0.3s;
+}
+.header__menu-sub {
+  text-transform: capitalize;
+  font-size: 18px;
+  position: relative;
+}
+.header__menu-sub:not(:last-child) {
+  margin-bottom: 12px;
+}
+.header__menu-sub::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  width: 6px;
+  height: 6px;
+  opacity: 0;
+  background: #DF2933;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+.header__menu-sub:hover::before {
+  opacity: 1;
+}
+.header__menu-sub a:hover::after {
+  width: 0;
+}
+.header__menu-link {
+  color: #060D37;
+  font-size: 18px;
+  position: relative;
+}
+.header__menu-link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  transition: width 0.3s;
+}
+.header__menu-link:hover::after {
+  width: 100%;
+}
+.header.light .header__menu-link {
+  color: #fff;
+}
+.header.light .header__menu-subs {
+  background: #82ADE3;
+}

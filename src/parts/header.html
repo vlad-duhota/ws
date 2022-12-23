@@ -1,0 +1,57 @@
+<header class="header @@color">
+    <div class="container">
+        <nav class="header__menu">
+            <ul class="header__menu-list">
+                <li class="header__menu-item header__menu-item_multiple">
+                    <a href="#" class="header__menu-link">Real Estate</a>
+                    <ul class="header__menu-subs">
+                        <li class="header__menu-sub">
+                            <a href="#" class="header__menu-link">overview</a>
+                        </li>
+                        <li class="header__menu-sub">
+                            <a href="#" class="header__menu-link">portfolio</a>
+                        </li>
+                        <li class="header__menu-sub">
+                            <a href="#" class="header__menu-link">availability</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Private Equity</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Credit</a>
+                </li>
+            </ul>
+            <a href="#" class="header__logo">
+                @@if (color == "light") {
+                <img src="@img/header/logo_light.svg" alt="logo">
+                }
+                @@if (color == "dark") {
+                <img src="@img/header/logo.svg" alt="logo">
+                }
+            </a>
+            <ul class="header__menu-list">
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Responsibility</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">About</a>
+                </li>
+                <li class="header__menu-item">
+                    <a href="#" class="header__menu-link">Contact</a>
+                </li>
+                <li class="header__menu-item header__menu-item_search">
+                    <a href="#" class="header__menu-link">
+                        @@if (color == "light") {
+                            <img src="@img/header/search_light.svg" alt="logo">
+                            }
+                            @@if (color == "dark") {
+                            <img src="@img/header/search.svg" alt="logo">
+                            }
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

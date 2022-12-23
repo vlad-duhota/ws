@@ -1,0 +1,114 @@
+.header{
+    padding: 15px 0;
+    &.light{
+        background: #82ADE3;
+    }
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-list{
+            display: flex;
+            gap: 62px;
+        }
+        &-item{
+            &_multiple{
+                position: relative;
+                &::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -20px;
+                    width: 6px;
+                    height: 6px;
+                    background: #fff;
+                    border-radius: 50%;
+                }
+                &:hover .header__menu-subs{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .header__menu-link{
+                    &:hover{
+                        &::after{
+                            width: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-subs{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            padding: 43px 34px 16px;
+            margin-left: -34px;
+            transition: opacity .3s;
+        }
+        &-sub{
+            text-transform: capitalize;
+            font-size: 18px;
+            &:not(:last-child){
+                margin-bottom: 12px;
+            }
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -20px;
+                width: 6px;
+                height: 6px;
+                opacity: 0;
+                background: #DF2933;
+                border-radius: 50%;
+                transition: opacity .3s;
+            }
+            &:hover{
+                &::before{
+                    opacity: 1;
+                }
+            }
+            a{
+                &:hover{
+                    &::after{
+                        width: 0;
+                    }
+                }
+            }
+        }
+        &-link{
+            color: $textColor;
+            font-size: 18px;
+            position: relative;
+            &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background: #fff;
+                transition: width .3s;
+            }
+            &:hover::after{
+                width: 100%;
+            }
+        }
+    }
+    &.light{
+        .header__menu-link{
+            color: #fff;
+        }
+        .header__menu-subs{
+            background: #82ADE3;
+        }
+    }
+}
