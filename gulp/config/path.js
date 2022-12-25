@@ -21,6 +21,7 @@ export const path = {
         scss: `${srcFolder}/scss/style.scss`,
         sass: `${srcFolder}/sass/main.sass`,
         html: `${srcFolder}/*.html`,
+        fonts: `${srcFolder}/fonts/*.{otf,ttf,woff,woff2}`,
         files: `${srcFolder}/assets/**/*.*`,
         svgicons: `${srcFolder}/svgicons/*.svg`,
     },

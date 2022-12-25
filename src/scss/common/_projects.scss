@@ -1,0 +1,83 @@
+.projects{
+    &__title{
+         margin-bottom: 70px;
+    }
+    &__list{
+        height: 796px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    &__item{
+        position: relative;
+        color: #fff;
+        &-title, &-text, &-sub{
+            position: relative;
+            z-index: 3;
+        }
+        &-title{
+            letter-spacing: 0.05em;
+            margin-bottom: 32px;
+        }
+        &-text{
+            padding-left: 16px;
+            border-left: 1px solid $orange;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        &-sub{
+            font-weight: 300;
+            font-size: 14px;
+            letter-spacing: 0.95em;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 33px;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
+        }
+        &-inner{
+            height: 100%;
+            background: url() center / cover no-repeat;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            padding: 32px 62px 0;
+            transition: height .5s ease-in-out;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(14, 20, 36, 0.65);
+                transition: backdrop-filter .5s;
+            }
+        }
+        &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8){
+            .projects__item-inner{
+                top: unset;
+                bottom: 0;
+            }
+        }
+        &:hover{
+            .projects__item-text{
+                opacity: 1;
+            }
+            .projects__item-inner{
+                height: 200%;
+                z-index: 4;
+                &::before{
+                    backdrop-filter: blur(7.5px);
+                }
+            }
+        }
+        .btn-icon{
+            position: absolute;
+            right: 39px;
+            bottom: 20px;
+        }
+    }
+}

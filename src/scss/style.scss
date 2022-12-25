@@ -1,2 +1,19 @@
+// global
+@import 'global/vars', 'global/global';
 
-@import 'vars', 'global', 'common/header';
+// global
+@import 'fonts';
+
+// header && footer
+@import 'common/header';
+
+// common sections
+@import 
+'common/about',
+'common/projects'
+;
+
+// main page
+// ==================================================================
+@import 'pages/index';
+// ==================================================================

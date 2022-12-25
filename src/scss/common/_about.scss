@@ -1,0 +1,24 @@
+.about{
+    padding: 135px 0;
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    &__text-col{
+        padding-right: 185px;
+        flex: 1 1 100%;
+    }
+    &__title{
+        max-width: 573px;
+        margin-bottom: 18px;
+    }
+    &__text{
+        margin-bottom: 18px;
+    }
+    &__img-col{
+        flex: 0 0 604px;
+    }
+    &__img{
+        width: 100%;
+    }
+}

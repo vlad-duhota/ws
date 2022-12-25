@@ -1,5 +1,9 @@
 .header{
     padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 3;
     &.light{
         background: #82ADE3;
     }
@@ -10,9 +14,14 @@
         &-list{
             display: flex;
             gap: 62px;
+            align-items: center;
         }
         &-item{
+            &-search{
+                padding-top: 2px;
+            }
             &_multiple{
+                padding-left: 20px;
                 position: relative;
                 &::before{
                     content: '';
@@ -20,10 +29,10 @@
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    left: -20px;
+                    left: 5px;
                     width: 6px;
                     height: 6px;
-                    background: #fff;
+                    background: #000;
                     border-radius: 50%;
                 }
                 &:hover .header__menu-subs{
@@ -42,11 +51,10 @@
         &-subs{
             position: absolute;
             top: 100%;
-            left: 0;
+            left: -13.5px;
             visibility: hidden;
             opacity: 0;
             padding: 43px 34px 16px;
-            margin-left: -34px;
             transition: opacity .3s;
         }
         &-sub{
@@ -62,7 +70,7 @@
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                left: -20px;
+                left: -15px;
                 width: 6px;
                 height: 6px;
                 opacity: 0;
@@ -87,6 +95,8 @@
             color: $textColor;
             font-size: 18px;
             position: relative;
+            font-weight: 400;
+            display: block;
             &::after{
                 content: '';
                 display: block;
@@ -95,7 +105,7 @@
                 left: 0;
                 width: 0;
                 height: 1px;
-                background: #fff;
+                background: #000;
                 transition: width .3s;
             }
             &:hover::after{
@@ -106,9 +116,17 @@
     &.light{
         .header__menu-link{
             color: #fff;
+            &::after{
+                background: #fff;
+            }
         }
         .header__menu-subs{
             background: #82ADE3;
+        }
+        .header__menu-item_multiple{
+            &::before{
+                background: #fff;
+            }
         }
     }
 }

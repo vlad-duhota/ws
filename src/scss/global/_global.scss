@@ -1,3 +1,4 @@
+// null styles
 *{
     margin: 0;
     box-sizing: border-box;
@@ -11,14 +12,17 @@ ul{
 a{
     text-decoration: none;
 }
+// =====================================================================
 
 // titles styles
 h1{
     font-size: $h1;
+    text-transform: capitalize;
 }
 
 h2{
     font-size: $h2;
+    text-transform: capitalize;
 }
 
 h3{
@@ -33,7 +37,16 @@ h1, h2, h3, h4{
     font-weight: 300;
     letter-spacing: normal;
     font-family: $titlesFont;
+    line-height: 135%;
 }
+.section-title{
+    &_centered{
+        @media (min-width: 768px) {
+            text-align: center;
+        }
+    }
+}
+// =====================================================================
 
 // text styles
 body{
@@ -50,6 +63,7 @@ body{
         font-size: $desktopFontSize;
     }
 }
+// =====================================================================
 
 // container
 .container{
@@ -57,3 +71,17 @@ body{
     padding: 0 $containerPadding;
     margin: 0 auto;
 }
+// =====================================================================
+
+// grid
+.section-p{
+    .container{
+        padding-left: 83px !important;
+        padding-right: 83px !important;
+    }
+}
+// =====================================================================
+
+// buttons
+@import 'common/btns';
+// =====================================================================

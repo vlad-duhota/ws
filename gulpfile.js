@@ -43,10 +43,10 @@ export { svgSprive }
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 
 // main tasks
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
+const mainTasks = gulp.series(gulp.parallel(copy, html, scss, js, images));
 
 // series
-const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const dev = gulp.series(reset, mainTasks, fonts, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZip = gulp.series(reset, mainTasks, zip);
 const deployFtp = gulp.series(reset, mainTasks, ftp);
