@@ -29,8 +29,14 @@
                     <img src="@img/home/scroll-down.svg" class="hero__scroll-img">
                 </a>          
         </section>
-        @@include('parts/about.html', {"reverse": "false"});   
-        @@include('parts/projects.html', {});   
+        @@include('parts/about.html', {"reverse": "false"}) 
+        @@include('parts/projects.html', {}) 
+        @@include('parts/main-block.html', {
+            "bg": "false",
+            "title": "Key Sectors of  Focus",
+            "text": "Focus drives investment performance. We've chosen to invest within a select range of Consumer and Business Services sub-sectors, in which we develop and pursue robust thematics. This approach is anchored in our unwavering commitment to partnering with leadership teams and continuously building insights and market expertise.",
+            "img": "@img/home/home_main-block.jpg"
+        })  
     </main>
 
     <!-- footer -->

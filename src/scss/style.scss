@@ -5,12 +5,13 @@
 @import 'fonts';
 
 // header && footer
-@import 'common/header';
+@import 'common/header', 'common/footer';
 
 // common sections
 @import 
 'common/about',
-'common/projects'
+'common/projects',
+'common/main-block'
 ;
 
 // main page
