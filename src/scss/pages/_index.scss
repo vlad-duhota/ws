@@ -68,7 +68,12 @@
         }
     }
     &__contact{
-        margin-top: 80px;
+        @media (min-width: 1099px) {
+            margin-top: 115px;
+        }
+        @media (min-width: 1500px) {
+            margin-top: 80px;
+        }
         &-form{
             margin-top: 26px;
         }

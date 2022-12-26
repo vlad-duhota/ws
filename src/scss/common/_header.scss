@@ -57,7 +57,12 @@
         }
         &-sub{
             text-transform: capitalize;
-            font-size: 18px;
+            @media (min-width: 1099px) {
+                font-size: 14px;
+            }
+            @media (min-width: 1500px) {
+                font-size: 18px;
+            }
             &:not(:last-child){
                 margin-bottom: 12px;
             }
@@ -89,7 +94,12 @@
         }
         &-link{
             color: $textColor;
-            font-size: 18px;
+            @media (min-width: 1099px) {
+                font-size: 14px;
+            }
+            @media (min-width: 1500px) {
+                font-size: 18px;
+            }
             position: relative;
             font-weight: 400;
             display: block;

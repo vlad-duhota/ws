@@ -16,6 +16,10 @@ a{
 input:focus-visible::placeholder{
     font-size: 0;
 }
+
+button{
+    padding: 0;
+}
 // =====================================================================
 
 // titles styles
@@ -91,6 +95,15 @@ body{
         font-size: $desktopFontSize;
     }
 }
+
+.laptop-text-small{
+    @media (min-width: 1099px) {
+        font-size: 14px;
+    }
+    @media (min-width: 1500px) {
+        font-size: $desktopFontSize;
+    }
+}
 // =====================================================================
 
 // container
@@ -113,6 +126,14 @@ body{
             padding-left: 110px !important;
             padding-right: 110px !important;
         }
+        @media (min-width: 1500px) {
+            padding-left: 83px !important;
+            padding-right: 83px !important;
+        }
+    }
+}
+.section-p-desktop{
+    .container{
         @media (min-width: 1500px) {
             padding-left: 83px !important;
             padding-right: 83px !important;

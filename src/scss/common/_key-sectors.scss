@@ -1,25 +1,46 @@
 .key-sectors{
-    padding: 72px 0;
+    @media (min-width: 1099px) {
+        padding: 92px 0;
+    }
     .container{
         display: flex;
         align-items: center;
     }
     &__col{
-        flex: 0 0 50%;
-        &_1{
-            padding-right: 146px;
+        &_1{ 
+            @media (min-width: 1099px) {
+                flex: 0 0 371px;
+            }
+            @media (min-width: 1500px) {
+                padding-right: 146px;
+                flex: 0 0 50%;
+            }
         }
         &_2{
-            padding-left: 107px;
+            @media (min-width: 1099px) {
+                flex: 1 1 100%;
+                padding-left: 87px;
+            }
+            @media (min-width: 1500px) {
+                padding-left: 107px;
+                flex: 0 0 50%;
+            }
         }
     }
     &__title{
-        max-width: 500px;
+        @media (min-width: 1099px) {
+            margin-bottom: 20px;
+        }
     }
     &__groups{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 116px;
+        @media (min-width: 1099px) {
+            gap: 107px;
+        } 
+        @media (min-width: 1500px) {
+            gap: 116px;
+        } 
     }
     &__group{
         &-item{

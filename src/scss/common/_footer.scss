@@ -12,6 +12,9 @@
     &__text{
         margin: 15px 0;
         @media (min-width: 1099px) {
+            font-size: 15px;
+        }
+        @media (min-width: 1500px) {
             font-size: 17px;
         }
     }
@@ -53,6 +56,9 @@
                 }
                
                 @media (min-width: 1099px) {
+                    font-size: 15px;
+                }
+                @media (min-width: 1500px) {
                     font-size: 17px;
                 }
                 &:not(:last-child){
@@ -83,6 +89,9 @@
                 bottom: -3px;
             }
             @media (min-width: 1099px) {
+                font-size: 15px;
+            }
+            @media (min-width: 1500px) {
                 font-size: 17px;
             }
         }
