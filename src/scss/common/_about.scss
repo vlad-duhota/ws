@@ -7,19 +7,35 @@
     &__text-col{
         padding-right: 185px;
         flex: 1 1 100%;
+        @media (max-width: 1500px) {
+            padding-right: 10px;
+            flex: 0 0 50%;
+        }
     }
     &__title{
         max-width: 573px;
         margin-bottom: 18px;
+        @media (max-width: 1500px) {
+            max-width: 300px;
+        }
     }
     &__text{
         margin-bottom: 18px;
     }
     &__img-col{
         flex: 0 0 604px;
+        @media (max-width: 1500px) {
+            flex: 0 0 50%;
+            height: 374px;
+            padding-left: 30px;
+        }
     }
     &__img{
         width: 100%;
+        @media (max-width: 1500px) {
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &_reverse{
         .container{
@@ -28,6 +44,9 @@
         .about__text-col{
             padding-left: 185px;
             padding-right: 0;
+            @media (max-width: 1500px) {
+                padding-left: 40px;
+            }
         }
     }
 }

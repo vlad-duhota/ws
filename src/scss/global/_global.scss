@@ -12,25 +12,53 @@ ul{
 a{
     text-decoration: none;
 }
+
+input:focus-visible::placeholder{
+    font-size: 0;
+}
 // =====================================================================
 
 // titles styles
-h1{
-    font-size: $h1;
+.h1{
     text-transform: capitalize;
+    font-size: $h1Mob;
+    @media (min-width: 1099px) {
+        font-size: $h1Lap;
+    }
+    @media (min-width: 1500px) {
+        font-size: $h1;
+    }
 }
 
-h2{
-    font-size: $h2;
+.h2{
     text-transform: capitalize;
+    font-size: $h2Mob;
+    @media (min-width: 1099px) {
+        font-size: $h2Lap;
+    }
+    @media (min-width: 1500px) {
+        font-size: $h2;
+    }
 }
 
-h3{
-    font-size: $h3;
+.h3{
+    font-size: $h3Mob;
+    @media (min-width: 1099px) {
+        font-size: $h3Lap;
+    }
+    @media (min-width: 1500px) {
+        font-size: $h3;
+    }
 }
 
-h4{
-    font-size: $h4;
+.h4{
+    font-size: $h4Mob;
+    @media (min-width: 1099px) {
+        font-size: $h4Lap;
+    }
+    @media (min-width: 1500px) {
+        font-size: $h4;
+    }
 }
 
 h1, h2, h3, h4{
@@ -67,17 +95,28 @@ body{
 
 // container
 .container{
-    max-width: $containerWidth + (2 * $containerPadding);
     padding: 0 $containerPadding;
     margin: 0 auto;
+    @media (min-width: 1099px) {    
+        max-width: $containerWidthLaptop + (2 * $containerPadding);
+    }
+    @media (min-width: 1500px) {    
+        max-width: $containerWidth + (2 * $containerPadding);
+    }
 }
 // =====================================================================
 
 // sections
 .section-p{
     .container{
-        padding-left: 83px !important;
-        padding-right: 83px !important;
+        @media (min-width: 1099px) {
+            padding-left: 110px !important;
+            padding-right: 110px !important;
+        }
+        @media (min-width: 1500px) {
+            padding-left: 83px !important;
+            padding-right: 83px !important;
+        }
     }
 }
 section.bg{

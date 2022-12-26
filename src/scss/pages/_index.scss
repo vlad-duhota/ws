@@ -49,3 +49,64 @@
         }
     }
 }
+
+// stay know
+.stay-know{
+    margin-top: -5px;
+    background: $primaryDark;
+    color: #fff;
+    padding: 165px 0;
+    .container{
+        display: flex;
+    }
+    .h2{
+        margin-bottom: 18px;
+    }
+    &__col{
+        &_1{
+            flex: 0 0 544px;
+        }
+    }
+    &__contact{
+        margin-top: 80px;
+        &-form{
+            margin-top: 26px;
+        }
+    }
+    &__text{
+        &_bold{
+            font-weight: 700;
+            font-size: 17px;
+            margin-top: 26px;
+        }
+    }
+    &__input{
+        display: block;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 20px;
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        outline: none;
+        color: #fff;
+        &:last-child{
+            margin-bottom: 26px;
+        }
+        &::placeholder{
+            color: #FFFFFF;
+            opacity: 0.4;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: $mainFont;
+        }
+    }
+    .btn-icon{
+        background: none;
+        border: none;
+        margin-top: 26px;
+        font-family: $mainFont;
+        font-size: 15px;
+    }
+}
