@@ -1,0 +1,63 @@
+.team-member{
+    padding: 200px 0 35px;
+    &__swiper{
+        position: relative;
+        padding-top: 50px;
+    }
+    &__slide{
+        display: grid;
+        grid-template-columns: 212px auto 128px;
+    }
+    &__img{
+        height: 212px;
+        object-fit: cover;
+    }
+    &__text{
+        padding: 0 174px;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: normal;
+        line-height: 150%;
+    }
+    &__info{
+        align-self: center;
+    }
+    &__pagination{
+        display: flex;
+        gap: 8px;
+        padding-left: 386px;
+        span{
+            height: 30px;
+            width: 50px;
+            position: relative;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 42.83px;
+                height: 2px;
+                background: #BFBFBF;
+                border-radius: 5px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: background .3s;
+            }
+            &.swiper-pagination-bullet-active::before{
+                background: $orange;
+            }
+        }
+    }
+    &__prev, &__next{
+        position: absolute;
+        z-index: 3;
+        top: 0;
+    }
+    &__prev{
+        left: 346px;
+        transform: rotate(180deg);
+    }
+    &__next{
+        right: 265px;
+    }
+}

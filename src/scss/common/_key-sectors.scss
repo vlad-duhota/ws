@@ -1,0 +1,37 @@
+.key-sectors{
+    padding: 72px 0;
+    margin-top: 120px;
+    background: $grey2;
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    &__col{
+        flex: 0 0 50%;
+        &_1{
+            padding-right: 146px;
+        }
+        &_2{
+            padding-left: 107px;
+        }
+    }
+    &__title{
+        max-width: 500px;
+    }
+    &__groups{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 116px;
+    }
+    &__group{
+        &-item{
+            margin-top: 12px;
+            text-transform: capitalize;
+            a{
+                color: $primaryDark;
+                font-weight: 500;
+                text-decoration: underline;
+            }
+        }
+    }
+}

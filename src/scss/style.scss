@@ -1,20 +1,22 @@
 // global
 @import 'global/vars', 'global/global';
 
-// global
+// fonts
 @import 'fonts';
 
 // header && footer
 @import 'common/header', 'common/footer';
 
+// swiper
+@import '../../node_modules/swiper/swiper.scss';
+
 // common sections
 @import 
 'common/about',
 'common/projects',
-'common/main-block'
-;
+'common/main-block',
+'common/team-member',
+'common/key-sectors';
 
 // main page
-// ==================================================================
 @import 'pages/index';
-// ==================================================================
