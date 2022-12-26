@@ -308,6 +308,22 @@ section.bg {
   align-items: center;
   margin-bottom: 15px;
   color: #060D37;
+  position: relative;
+}
+.footer__item-link::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -7px;
+  opacity: 0;
+  background: #060D37;
+  transition: opacity 0.3s, bottom 0.4s;
+}
+.footer__item-link:hover::before {
+  opacity: 1;
+  bottom: -3px;
 }
 @media (min-width: 1099px) {
   .footer__item-link {
