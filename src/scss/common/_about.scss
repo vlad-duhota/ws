@@ -21,4 +21,13 @@
     &__img{
         width: 100%;
     }
+    &_reverse{
+        .container{
+            flex-direction: row-reverse;
+        }
+        .about__text-col{
+            padding-left: 185px;
+            padding-right: 0;
+        }
+    }
 }

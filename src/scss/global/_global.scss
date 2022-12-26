@@ -73,12 +73,15 @@ body{
 }
 // =====================================================================
 
-// grid
+// sections
 .section-p{
     .container{
         padding-left: 83px !important;
         padding-right: 83px !important;
     }
+}
+section.bg{
+    background: $grey2;
 }
 // =====================================================================
 

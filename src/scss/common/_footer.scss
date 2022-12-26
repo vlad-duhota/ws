@@ -32,6 +32,26 @@
         }
         ul:not(.footer__socials){
             li{
+                a{
+                    cursor: pointer;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        bottom: -7px;
+                        opacity: 0;
+                        background: $textColor;
+                        transition: opacity .3s, bottom .4s;
+                    }
+                    &:hover::before{
+                        opacity: 1;
+                        bottom: -3px;
+                    }
+                }
+               
                 @media (min-width: 1099px) {
                     font-size: 17px;
                 }
@@ -71,14 +91,15 @@
     }
     &__copy{
         color: $textColor;
-        opacity: .25;
+        color: rgba($color: $textColor, $alpha: .25);
         font-weight: 400;
     }
     &__ursa{
         display: flex;
         gap: 18px;
-        svg{
-            opacity: .25;
+        span{
+            color: rgba($color: $textColor, $alpha: .25);
+            font-weight: 400;
         }
     }
 }
