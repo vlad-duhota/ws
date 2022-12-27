@@ -2,8 +2,10 @@
     padding-top: 174px;
     &__img{
         width: 100%;
+        transform: scale(.83);;
         height: 100vh;
         object-fit: cover;
+        transition: transform .3s ease-in-out;
     }
     &__content{
         max-width: 526px;

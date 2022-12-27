@@ -1,4 +1,18 @@
 .team-member{
+    position: relative;
+    &__zone{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        z-index: 4;
+        &_1{
+            left: 0;
+        }
+        &_2{
+            right: 0;
+        }
+    }
     @media (min-width: 1099px) {
         padding: 120px 0 0px;
     }

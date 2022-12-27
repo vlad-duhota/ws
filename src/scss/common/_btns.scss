@@ -16,12 +16,38 @@
         justify-content: center;
         border-radius: 50%;
         transition: background .3s;
+        position: relative;
+        overflow: hidden;
+    }
+    img{
+        transform: translateX(50%);
+        right: 50%;
+        position: absolute;
     }
     &:hover span{
         background: $primaryLight;
+        img{
+            animation: hover 1.2s ease-in-out forwards;
+        }
     }
     &_light{
             color: #fff;
+    }
+}
+@keyframes hover {
+    0%{
+        right: 50%;
+    }
+    25%{
+        right: -20px;
+    }
+    75%{
+        right: unset;
+        left: -20px;
+    }
+    100%{
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 // =====================================================================
