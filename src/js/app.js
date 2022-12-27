@@ -33,7 +33,7 @@ let companySwiper = new Swiper('.company__swiper', {
     loop: true,
     slidesPerView: 3,
     slidesPerSlide: 1,
-    speed: 750,
+    speed: 850,
     navigation: {
         nextEl: '.company__next',
         prevEl: '.company__prev',

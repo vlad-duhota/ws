@@ -26,7 +26,7 @@ button {
 }
 @media (min-width: 1099px) {
   .h1 {
-    font-size: 42px;
+    font-size: 52px;
   }
 }
 @media (min-width: 1500px) {
@@ -931,14 +931,13 @@ section.bg {
   margin: 0 auto 5px;
   max-width: 212px;
   font-family: TestSignifier, sans-serif;
-  transition: text-decoration 0.3s;
 }
 .company__slide img {
   width: 120px;
   height: auto;
   display: block;
   margin: 0 auto 30px;
-  transition: width 0.4s ease-in-out;
+  transition: width 0.5s ease-in-out;
   position: absolute;
   bottom: 0;
   left: 50%;
