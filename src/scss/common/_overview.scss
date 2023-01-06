@@ -1,0 +1,106 @@
+.overview{
+    .container{
+       max-width: 800px;
+    }
+    @media (min-width: 1099px) {
+        padding: 0 0 122px 0;
+    }
+    &__text{
+      max-width: 643px;
+      @media (min-width: 768px) {
+        text-align: center;
+        margin: 20px auto 0;
+      }
+    }
+    &__main{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        &-img{
+            width: 50%;
+            position: relative;
+            h3{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                width: 88px;
+                text-align: center;
+                text-transform: capitalize;
+            }
+            svg{
+                width: 100%;
+                transition: all .3s;
+                path{
+                    position: relative;
+                    &:hover{
+                        stroke-width: 12;
+                        stroke:#0A32E4;
+                        z-index: 3;
+                    }
+                    &.path-2:hover{
+                        stroke:#9CABF2;
+                    }
+                    &.path-3:hover{
+                        stroke:#627CEE;
+                    }
+                }
+            }
+        }
+        &-title{
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 6px;
+            span{
+                font-size: 18px;
+                color: $primary;
+            }
+        }
+        &-block{
+            position: absolute;
+            top: 51px;
+            max-width: 184px;
+            font-size: 14px;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                height: 1px;
+                width: 110px;
+                background: $primary;
+                left: -120px;
+                top: 13px;
+            }
+            &_left{
+                left: 0;
+                text-align: right;
+                .overview__main-title{
+                    flex-direction: row-reverse;
+                }
+                &::before{
+                    left: unset;
+                    right: -120px;
+                }
+            }
+            &_right{
+                right: 0;       
+            }
+            &:last-child{
+                right: 0;
+                top: unset;
+                bottom: 30%;
+                &::before{
+                    width: 66px;
+                    left: -76px;
+                }
+            }
+        }
+    }
+}

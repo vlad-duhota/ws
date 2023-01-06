@@ -141,3 +141,23 @@ document.addEventListener("wheel", (e)=> {
     return rect.height > rect.top;
 }
 }
+
+// svf graphic
+let svg = document.querySelector(".overview__main-img svg");
+let rects = document.querySelectorAll(".overview__main-img path");
+
+rects.forEach(rect => {
+  rect.addEventListener("mouseenter", e => {
+    svg.appendChild(rect);
+  });
+});
+
+// sticky header
+const header = document.querySelector('.header');
+const logo = document.querySelector('.header__logo');
+
+document.addEventListener('scroll', function(){
+  if(window.scrollY > 30){
+    header.classList.add('header_scrolled');
+  }
+});

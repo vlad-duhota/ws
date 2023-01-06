@@ -92,12 +92,12 @@
     }
     &__pagination{
         display: flex;
-        gap: 8px;
+        gap: 3px;
         @media (min-width: 1099px) {
-            padding-left: 284px;
+            padding-left: 361px;
         }
         @media (min-width: 1500px) {
-            padding-left: 386px;
+            padding-left: 422px;
         }
         span{
             height: 30px;

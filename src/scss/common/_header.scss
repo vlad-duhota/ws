@@ -1,8 +1,9 @@
 .header{
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     width: 100%;
     top: 0;
-    z-index: 3;
+    z-index: 99;
     &.light{
         background: #82ADE3;
     }
@@ -15,9 +16,20 @@
         transform: translateX(-50%);
         display: flex;
         align-items: center;
+        height: 75%;
+        overflow: hidden;
+        transition: height .3s;
         img{
-            height: 53px;
+            height: 100%;
             width: auto;
+        }
+    }
+    &_scrolled{
+        .header__logo{
+            img{
+                height: 120%;
+                margin-top: auto;
+            }
         }
     }
     &__menu{
@@ -25,6 +37,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transition: min-height .3s;
         &-list{
             display: flex;
             gap: 62px;
@@ -97,6 +110,7 @@
             opacity: 0;
             padding: 43px 34px 16px;
             transition: opacity .3s;
+            background: #fff;
         }
         &-sub{
             text-transform: capitalize;
@@ -163,6 +177,11 @@
                 opacity: 1;
             }
         }
+    }
+    &_scrolled{
+        .header__menu{
+            min-height: 60px;
+        }  
     }
     &.light{
         .header__menu-link{

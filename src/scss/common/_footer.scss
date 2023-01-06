@@ -1,8 +1,11 @@
 .footer{
     padding-top: 60px;
     &-middle{
-        padding-top: 3px;
-        padding-bottom: 93px;
+        align-items: center;
+        @media (min-width: 1099px) {
+            padding-bottom: 93px;
+            margin-top: -20px;
+        }
         .container{
             @media (min-width: 768px) {
                 display: flex;
