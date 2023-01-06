@@ -72,6 +72,9 @@ h1, h2, h3, h4{
     line-height: 135%;
 }
 .section-title{
+    span{
+    font-style: italic;     
+    }
     &_centered{
         @media (min-width: 768px) {
             text-align: center;
@@ -116,6 +119,11 @@ body{
     @media (min-width: 1500px) {    
         max-width: $containerWidth + (2 * $containerPadding);
     }
+}
+
+.wrapper{
+    position: relative;
+    overflow: hidden;
 }
 // =====================================================================
 

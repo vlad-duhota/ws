@@ -13,6 +13,13 @@ document.querySelectorAll('a.anchor').forEach(anchor => {
     });
 });
 
+// menu search
+const searchBtn = document.querySelector('.header__menu-item_search a');
+const searchForm = document.querySelector('.header__menu-item_search form');
+searchBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  searchForm.classList.toggle('active');
+})
 // team member swiper
 let teamSwiper = new Swiper('.team-member__swiper', {
     autoHeight: true,
@@ -101,10 +108,6 @@ let companySwiper = new Swiper('.company__swiper', {
 //     threshold: .7
 //   }
 
-  const zoomScreen = document.querySelector(".main-block__img");
-  let zoom = .83;
-  let imageOnScreen = false;
-  const zoomingSpeed = 0.056;
   
 //   let observer = new IntersectionObserver((entries) => {
 //     entries.forEach((entry) => {
@@ -120,6 +123,12 @@ let companySwiper = new Swiper('.company__swiper', {
 
 //   observer.observe(zoomScreen);
 
+if(document.querySelector(".main-block__img")){
+const zoomScreen = document.querySelector(".main-block__img");
+  let zoom = .83;
+  let imageOnScreen = false;
+  const zoomingSpeed = 0.056;
+
 document.addEventListener("wheel", (e)=> {
   if(isInViewport(zoomScreen)){
         if (e.deltaY > 0 && !((zoom + zoomingSpeed) > 1)) {
@@ -130,4 +139,5 @@ document.addEventListener("wheel", (e)=> {
   function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return rect.height > rect.top;
+}
 }

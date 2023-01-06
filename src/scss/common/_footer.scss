@@ -1,8 +1,17 @@
 .footer{
     padding-top: 60px;
+    &-middle{
+        padding-top: 3px;
+        padding-bottom: 93px;
+        .container{
+            @media (min-width: 768px) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
     &-main{
         display: flex;
-        padding-bottom: 93px;
         &__col{
             &_1{
                 flex: 0 0 300px;
@@ -100,6 +109,15 @@
         display: flex;
         align-items: center;
         gap: 25px;
+        &-link{
+            width: 36px;
+            height: 36px;
+            background: #DADBE1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
         &-img{
             height: 16.5px;
             width: auto;

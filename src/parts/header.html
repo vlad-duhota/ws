@@ -32,6 +32,20 @@
                 }
             </a>
             <ul class="header__menu-list">
+                <li class="header__menu-item header__menu-item_search">
+                    <form action="">
+                        <input type="text" class="header__menu-input">
+                    </form>
+             
+                    <a href="#" class="">
+                        @@if (color == "light") {
+                            <img src="@img/header/search_light.svg" alt="logo">
+                            }
+                            @@if (color == "dark") {
+                            <img src="@img/header/search.svg" alt="logo">
+                            }
+                    </a>
+                </li>
                 <li class="header__menu-item">
                     <a href="#" class="header__menu-link">Responsibility</a>
                 </li>
@@ -40,16 +54,6 @@
                 </li>
                 <li class="header__menu-item">
                     <a href="#" class="header__menu-link">Contact</a>
-                </li>
-                <li class="header__menu-item header__menu-item_search">
-                    <a href="#" class="header__menu-link">
-                        @@if (color == "light") {
-                            <img src="@img/header/search_light.svg" alt="logo">
-                            }
-                            @@if (color == "dark") {
-                            <img src="@img/header/search.svg" alt="logo">
-                            }
-                    </a>
                 </li>
             </ul>
         </nav>

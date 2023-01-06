@@ -1,5 +1,4 @@
 .header{
-    padding: 15px 0;
     position: absolute;
     width: 100%;
     top: 0;
@@ -7,7 +6,22 @@
     &.light{
         background: #82ADE3;
     }
+    .container{
+        position: relative;
+    }
+    &__logo{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        img{
+            height: 53px;
+            width: auto;
+        }
+    }
     &__menu{
+        min-height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -16,9 +30,38 @@
             gap: 62px;
             align-items: center;
         }
+        form{
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+            width: 0px;
+            visibility: hidden;
+            height: 100%;
+        
+            transition: width .4s;
+            &.active{
+                visibility: visible;
+                width: 130px;
+            }
+        }
+        input{
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            color: #fff; 
+            padding-right: 27px;
+            padding-bottom: 11px;
+        }
         &-item{
-            &-search{
+            &_search{
                 padding-top: 2px;
+                position: relative;
+                a{
+                    position: relative;
+                    z-index: 4;
+                }
             }
             &_multiple{
                 padding-left: 20px;

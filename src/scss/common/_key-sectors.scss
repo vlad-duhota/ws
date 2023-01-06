@@ -11,19 +11,11 @@
             @media (min-width: 1099px) {
                 flex: 0 0 371px;
             }
-            @media (min-width: 1500px) {
-                padding-right: 146px;
-                flex: 0 0 50%;
-            }
         }
         &_2{
             @media (min-width: 1099px) {
                 flex: 1 1 100%;
-                padding-left: 87px;
-            }
-            @media (min-width: 1500px) {
-                padding-left: 107px;
-                flex: 0 0 50%;
+                padding-left: 85px;
             }
         }
     }
@@ -34,18 +26,13 @@
     }
     &__groups{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        @media (min-width: 1099px) {
-            gap: 107px;
-        } 
-        @media (min-width: 1500px) {
-            gap: 116px;
-        } 
+        grid-template-columns: repeat(3, 1fr);
     }
     &__group{
         &-item{
             margin-top: 12px;
             text-transform: capitalize;
+            padding-right: 45px;
             a{
                 color: $primaryDark;
                 font-weight: 500;
